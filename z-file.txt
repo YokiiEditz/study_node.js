@@ -1,0 +1,7 @@
+Resources: 
+Node Js Doc: https://nodejs.org/en/docs
+npm Js Doc: https://docs.npmjs.com/
+JavaScript Basics : https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+W3 School : https://www.w3schools.com/js/default.asp
+API :  https://aws.amazon.com/what-is/api/#:~:text=API%20stands%20for%20Application%20Programming,other%20using%20requests%20and%20responses
+Book for further reading: https://eloquentjavascript.net/
