@@ -1,16 +1,18 @@
-const logEvents = require("./logEvent");
+const express = require("express");
+const mongoose = require("mongoose");
+const url = "mongodb://localhost/mern-crud-app";
+const PORT = 9601;
+const app = express();
 
-const EventEmitter = require("node:events");
+mongoose.connect(url);
+const con = mongoose.connection;
 
-class MyEmitter extends EventEmitter {}
-
-const myEmitter = new MyEmitter();
-myEmitter.on("log", (msg) => {
-  logEvents(msg);
+con.on("open", function () {
+  console.log("connected!");
 });
 
-myEmitter.emit("log", "Message event is here! ");
+const routers = require("./routers/all");
 
-// const example = require("./dir");
-// console.log(example.pname);
-// console.log(example.nickname);
+app.use("/all", routers);
+
+app.listen(PORT, () => console.log(`Server running on ${PORT} `));
