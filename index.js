@@ -10,3 +10,7 @@ myEmitter.on("log", (msg) => {
 });
 
 myEmitter.emit("log", "Message event is here! ");
+
+// const example = require("./dir");
+// console.log(example.pname);
+// console.log(example.nickname);
